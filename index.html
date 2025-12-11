@@ -13,20 +13,13 @@
         margin: 0;
       }
       .reveal section img {
-        /* Increase size for Special Item */
-        width: 400px;
-        height: 350px;
-        object-fit: cover;
-        border-radius: 20px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        /* Increase size for Special Item */
-        max-width: 400px;
-        max-height: 300px;
         width: 220px;
         height: 180px;
         object-fit: cover;
         border-radius: 20px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        /* Lazy load images */
+        loading: lazy;
       }
       .reveal h1, .reveal h2 {
         font-family: 'Poppins', sans-serif;
@@ -64,12 +57,12 @@
         <section>
           <h2>Breakfast Specials</h2>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; justify-items: center;">
-            <div><img src="dishes/mataki_poha.jpeg" /><p class="dish-desc">Mataki Poha</p></div>
-            <div><img src="dishes/ots_pan_cake.jpeg" /><p class="dish-desc">Oats Pancake</p></div>
-            <div><img src="dishes/shira.jpeg" /><p class="dish-desc">Shira</p></div>
-            <div><img src="dishes/apple_smoothi.jpeg" /><p class="dish-desc">Apple Smoothie</p></div>
-            <div><img src="dishes/aloo_pattice.jpeg" /><p class="dish-desc">Aloo Pattice</p></div>
-            <div><img src="dishes/thalipeeth.jpeg" /><p class="dish-desc">Thalipeeth</p></div>
+            <div><img src="dishes/mataki_poha.jpeg" loading="lazy" /><p class="dish-desc">Mataki Poha</p></div>
+            <div><img src="dishes/ots_pan_cake.jpeg" loading="lazy" /><p class="dish-desc">Oats Pancake</p></div>
+            <div><img src="dishes/shira.jpeg" loading="lazy" /><p class="dish-desc">Shira</p></div>
+            <div><img src="dishes/apple_smoothi.jpeg" loading="lazy" /><p class="dish-desc">Apple Smoothie</p></div>
+            <div><img src="dishes/aloo_pattice.jpeg" loading="lazy" /><p class="dish-desc">Aloo Pattice</p></div>
+            <div><img src="dishes/thalipeeth.jpeg" loading="lazy" /><p class="dish-desc">Thalipeeth</p></div>
           </div>
         </section>
 
@@ -83,20 +76,20 @@
         <section>
           <h2>Lunch Specials</h2>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; justify-items: center;">
-            <div><img src="dishes/aloo_biryani.jpeg" /><p class="dish-desc">Aloo Biryani</p></div>
-            <div><img src="dishes/panner_biryani.jpeg" /><p class="dish-desc">Paneer Biryani</p></div>
-            <div><img src="dishes/sar_khichadi.jpeg" /><p class="dish-desc">Sar Khichadi</p></div>
-            <div><img src="dishes/daltadaka_jeera_rice.jpeg" /><p class="dish-desc">Dal Tadaka + Jeera Rice</p></div>
-            <div><img src="dishes/pitala_bhakari.jpeg" /><p class="dish-desc">Pithala Bhakri</p></div>
-            <div><img src="dishes/daal_bhaji.jpeg" /><p class="dish-desc">Dal Bhaji</p></div>
-            <div><img src="dishes/dahi_bhaji.jpeg" /><p class="dish-desc">Dahi Bhaji</p></div>
-            <div><img src="dishes/bharit_bhaji.jpeg" /><p class="dish-desc">Bharit Bhaji</p></div>
-            <div><img src="dishes/bhindi_fry_bhaji.jpeg" /><p class="dish-desc">Bhindi Fry Bhaji</p></div>
-            <div><img src="dishes/brinjal_bhaji.jpeg" /><p class="dish-desc">Brinjal Bhaji</p></div>
-            <div><img src="dishes/gawar_bhaji.jpeg" /><p class="dish-desc">Gawar Bhaji</p></div>
-            <div><img src="dishes/sprouts_chile.jpeg" /><p class="dish-desc">Sprouts Chilla</p></div>
-            <div><img src="dishes/shev_bhaji.jpeg" /><p class="dish-desc">Shev Bhaji</p></div>
-            <div><img src="dishes/kutake.jpeg" /><p class="dish-desc">Kutake</p></div>
+            <div><img src="dishes/aloo_biryani.jpeg" loading="lazy" /><p class="dish-desc">Aloo Biryani</p></div>
+            <div><img src="dishes/panner_biryani.jpeg" loading="lazy" /><p class="dish-desc">Paneer Biryani</p></div>
+            <div><img src="dishes/sar_khichadi.jpeg" loading="lazy" /><p class="dish-desc">Sar Khichadi</p></div>
+            <div><img src="dishes/daltadaka_jeera_rice.jpeg" loading="lazy" /><p class="dish-desc">Dal Tadaka + Jeera Rice</p></div>
+            <div><img src="dishes/pitala_bhakari.jpeg" loading="lazy" /><p class="dish-desc">Pithala Bhakri</p></div>
+            <div><img src="dishes/daal_bhaji.jpeg" loading="lazy" /><p class="dish-desc">Dal Bhaji</p></div>
+            <div><img src="dishes/dahi_bhaji.jpeg" loading="lazy" /><p class="dish-desc">Dahi Bhaji</p></div>
+            <div><img src="dishes/bharit_bhaji.jpeg" loading="lazy" /><p class="dish-desc">Bharit Bhaji</p></div>
+            <div><img src="dishes/bhindi_fry_bhaji.jpeg" loading="lazy" /><p class="dish-desc">Bhindi Fry Bhaji</p></div>
+            <div><img src="dishes/brinjal_bhaji.jpeg" loading="lazy" /><p class="dish-desc">Brinjal Bhaji</p></div>
+            <div><img src="dishes/gawar_bhaji.jpeg" loading="lazy" /><p class="dish-desc">Gawar Bhaji</p></div>
+            <div><img src="dishes/sprouts_chile.jpeg" loading="lazy" /><p class="dish-desc">Sprouts Chilla</p></div>
+            <div><img src="dishes/shev_bhaji.jpeg" loading="lazy" /><p class="dish-desc">Shev Bhaji</p></div>
+            <div><img src="dishes/kutake.jpeg" loading="lazy" /><p class="dish-desc">Kutake</p></div>
           </div>
         </section>
 
@@ -110,61 +103,14 @@
         <section>
           <h2>Dinner Specials</h2>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; justify-items: center;">
-            <div><img src="dishes/panner_tandoor.jpeg" /><p class="dish-desc">Paneer Tandoor</p></div>
-            <div><img src="dishes/panner_cheese_paratha.jpeg" /><p class="dish-desc">Paneer Cheese Paratha</p></div>
-            <div><img src="dishes/aloo_franky.jpeg" /><p class="dish-desc">Aloo Franky</p></div>
-            <div><img src="dishes/aloo_paratha.jpeg" /><p class="dish-desc">Aloo Paratha</p></div>
-            <div><img src="dishes/daal_batti.jpeg" /><p class="dish-desc">Dal Baati</p></div>
-            <div><img src="dishes/panner_biryani.jpeg" /><p class="dish-desc">Paneer Biryani</p></div>
+            <div><img src="dishes/panner_tandoor.jpeg" loading="lazy" /><p class="dish-desc">Paneer Tandoor</p></div>
+            <div><img src="dishes/panner_cheese_paratha.jpeg" loading="lazy" /><p class="dish-desc">Paneer Cheese Paratha</p></div>
+            <div><img src="dishes/aloo_franky.jpeg" loading="lazy" /><p class="dish-desc">Aloo Franky</p></div>
+            <div><img src="dishes/aloo_paratha.jpeg" loading="lazy" /><p class="dish-desc">Aloo Paratha</p></div>
+            <div><img src="dishes/daal_batti.jpeg" loading="lazy" /><p class="dish-desc">Dal Baati</p></div>
+            <div><img src="dishes/panner_biryani.jpeg" loading="lazy" /><p class="dish-desc">Paneer Biryani</p></div>
           </div>
         </section>
-
-        <!-- SPECIAL ITEM: DAL BAATI -->
-        <section>
-          <h2>⭐ Special Item</h2>
-          <div style="display:flex; flex-direction:column; align-items:center; gap:20px;">
-            <img src="dishes/daal_batti.jpeg" alt="Dal Baati" />
-            <p class="dish-desc">Dal Baati – Premium Special Dish of the Day</p>
-          </div>
-        </section>
-
-        
-
-        
 
       </div>
     </div>
-
-    <!-- Reveal.js script -->
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-    <script>
-      Reveal.initialize({
-        width: "100%",
-        height: "100%",
-        transition: "fade"
-      });
-    </script>
-      <!-- Fullscreen Image Modal -->
-    <div id="imgModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
-      <img id="modalImg" style="max-width:90%; max-height:90%; border-radius:20px;" />
-    </div>
-
-    <script>
-      // Enable fullscreen on click
-      document.querySelectorAll('.reveal section img').forEach(img => {
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', () => {
-          const modal = document.getElementById('imgModal');
-          const modalImg = document.getElementById('modalImg');
-          modalImg.src = img.src;
-          modal.style.display = 'flex';
-        });
-      });
-
-      // Close modal on click
-      document.getElementById('imgModal').addEventListener('click', () => {
-        document.getElementById('imgModal').style.display = 'none';
-      });
-    </script>
-  </body>
-</html>
