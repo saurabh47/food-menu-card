@@ -73,6 +73,23 @@
         font-size: 2.2rem;
         font-weight: bold;
       }
+
+      /* Button Styling for Mini Game */
+      #suggestBtn {
+        padding: 15px 35px;
+        font-size: 1.4rem;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+        background: #ff9800;
+        color: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      }
+      #suggestResult {
+        margin-top: 40px;
+        font-size: 2rem;
+        color: #00e5ff;
+      }
     </style>
   </head>
 
@@ -165,6 +182,16 @@
           </div>
         </section>
 
+        <!-- 🎮 FUN GAME: Confused What to Eat? -->
+        <section>
+          <h2>🤔 Confused What to Eat?</h2>
+
+          <div style="text-align:center; margin-top:30px;">
+            <button id="suggestBtn">🎲 Suggest a Dish</button>
+            <h2 id="suggestResult">👉 Click the button!</h2>
+          </div>
+        </section>
+
       </div>
     </div>
 
@@ -217,6 +244,38 @@
 
       document.getElementById("imgModal").addEventListener("click", () => {
         document.getElementById("imgModal").style.display = "none";
+      });
+
+      // 🎮 Random Suggestion Game
+      const breakfast = [
+        "Mataki Poha", "Oats Pancake", "Shira", 
+        "Apple Smoothie", "Aloo Pattice", "Thalipeeth"
+      ];
+
+      const lunch = [
+        "Aloo Biryani", "Paneer Biryani", "Sar Khichadi",
+        "Dal Tadka + Jeera Rice", "Pithala Bhakri", "Dal Bhaji",
+        "Dahi Bhaji", "Bharit Bhaji", "Bhindi Fry", "Brinjal Bhaji",
+        "Gawar Bhaji", "Sprouts Chilla", "Shev Bhaji", "Kutake"
+      ];
+
+      const dinner = [
+        "Paneer Tandoor", "Paneer Cheese Paratha", "Aloo Franky",
+        "Aloo Paratha", "Dal Baati", "Paneer Biryani"
+      ];
+
+      function getDishByTime() {
+        const hr = new Date().getHours();
+        if (hr >= 5 && hr < 11) return breakfast;
+        if (hr >= 11 && hr < 17) return lunch;
+        return dinner;
+      }
+
+      document.getElementById("suggestBtn").addEventListener("click", () => {
+        const list = getDishByTime();
+        const randomDish = list[Math.floor(Math.random() * list.length)];
+        document.getElementById("suggestResult").textContent =
+          "🍽️ You should eat: " + randomDish;
       });
     </script>
   </body>
